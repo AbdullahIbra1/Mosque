@@ -35,9 +35,6 @@ class Db:
     def update_Imam(self,imamname,name):
         self.cur.execute("UPDATE mosques SET IMAM_NAME = ? WHERE NAME = ? ",(imamname,name))
         self.conn.commit()
-    def get_data(self):
-        pass
-
     def __del__(self):
         self.conn.close()
     
